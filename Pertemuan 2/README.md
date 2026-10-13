@@ -20,13 +20,13 @@ Proyek ini merupakan tugas praktikum HTML yang berisi halaman profil organisasi 
 ```text
 .
 ├── index.html
+├── README.md
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── logo/
-│ └── logo.png
-├── gedung/
-│ └── image.jpg
-└── README.md
+│   └── logo.png
+└── gedung/
+    └── image.jpg
 ```
 
 >  `css/style.css`, `logo/logo.png`, dan `gedung/image.jpg` tersedia agar tampilan halaman berjalan dengan baik.
