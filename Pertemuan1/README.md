@@ -7,4 +7,4 @@ NPM: 4525210130
 Mata Kuliah: Prak. Desain Web
 ```
 ### Hasil
-<img ![alt text](<img/hasil.png>) 
+ ![alt text](<img/hasil.png>) 
