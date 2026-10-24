@@ -1,0 +1,162 @@
+/* ==========================================================
+   css/style.css : tampilan wireframe company profile
+   Wireframe sengaja memakai abu-abu saja. Warna merek dan foto
+   asli baru dipakai pada tahap desain high fidelity.
+   ========================================================== */
+
+/* ===== 0. WARNA ===== */
+:root {
+  --kertas: #ffffff;
+  --latar: #f4f4f4;
+  --abu-terang: #ebebeb;
+  --abu: #d4d4d4;
+  --abu-tua: #8a8a8a;
+  --garis: #4a4a4a;
+  --teks: #111111;
+  --anotasi: #1a56db;   /* biru: nomor anotasi */
+}
+
+/* ===== 1. PENGATURAN DASAR ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--teks); background: var(--latar); line-height: 1.5; }
+a:focus-visible { outline: 3px solid var(--anotasi); outline-offset: 2px; }
+
+.halaman { max-width: 1160px; margin: 0 auto; padding: 24px 16px 48px; }
+.petunjuk { margin-bottom: 20px; font-size: 14px; color: #333; }
+
+/* Bingkai besar yang membungkus seluruh wireframe */
+.kerangka {
+  display: flex; flex-direction: column; gap: 24px;
+  background: var(--kertas); border: 2px solid var(--garis); padding: 24px;
+}
+.isi-utama { display: flex; flex-direction: column; gap: 24px; }
+
+/* ===== 2. AREA + NOMOR ANOTASI ===== */
+.area { position: relative; background: var(--abu-terang); border: 2px dashed var(--garis); padding: 16px; }
+.no {
+  position: absolute; top: -14px; left: -14px; z-index: 1;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--anotasi); color: #fff; font-size: 14px; font-weight: bold;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ===== 3. TOMBOL ===== */
+.tombol {
+  display: inline-block; padding: 10px 18px; border: 2px solid var(--teks);
+  font-size: 14px; font-weight: bold; text-decoration: none; text-align: center; color: var(--teks);
+}
+.tombol-isi   { background: var(--teks); color: #fff; }
+.tombol-garis { background: var(--kertas); }
+
+/* ===== 4. KOTAK FOTO / PETA (bersilang) ===== */
+.silang.ada-foto {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+.silang.ada-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.silang.tinggi-banner {
+  position: relative;
+  overflow: hidden;
+}
+.silang.tinggi-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.banner-teks {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(0,0,0,.6), rgba(0,0,0,0));
+}
+.label { background: var(--abu-terang); border: 1px solid var(--abu-tua); padding: 6px 12px; font-size: 14px; font-weight: bold; text-align: center; }
+.tinggi-banner { height: clamp(160px, 30vw, 320px); }
+.tinggi-foto   { aspect-ratio: 4 / 3; }
+.tinggi-peta   { height: clamp(140px, 20vw, 220px); }
+
+/* ===== 5. HEADER + MENU ===== */
+.area-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.merek { display: flex; align-items: center; gap: 12px; }
+.logo {
+  width: 48px; height: 48px; border: 2px solid var(--abu-tua); background: var(--abu);
+  font-size: 11px; font-weight: bold; display: flex; align-items: center; justify-content: center;
+}
+.merek h1 { font-size: 20px; }
+
+.area-menu { padding: 6px 16px; }
+.area-menu ul { display: flex; gap: 4px; list-style: none; overflow-x: auto; }
+.area-menu a {
+  display: block; padding: 8px 14px; color: var(--teks); font-size: 14px;
+  text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent;
+}
+.area-menu a:hover { border-bottom-color: var(--teks); }
+
+/* ===== 6. PENGANTAR (teks di kiri, dua tombol di kanan) ===== */
+.area-pengantar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.pengantar-teks { flex: 1 1 200px; }
+.pengantar-teks h2 { font-size: clamp(20px, 3vw, 28px); margin-bottom: 6px; }
+.pengantar-tombol { display: flex; flex-direction: column; gap: 10px; }
+
+/* ===== 7. BAGIAN-BAGIAN ===== */
+.area h2 { font-size: 22px; }
+.tentang { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.tentang h2 { margin-bottom: 8px; }
+
+.area > h2 { margin-bottom: 12px; }
+.layanan-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.kartu { background: var(--kertas); border: 2px solid var(--garis); padding: 16px; }
+.kartu h3 { font-size: 17px; margin-bottom: 6px; }
+
+.kontak-isi { display: flex; flex-direction: column; gap: 12px; background: var(--kertas); border: 2px solid var(--garis); padding: 16px; }
+.kontak-daftar { list-style: none; }
+.kontak-isi .tombol { align-self: flex-start; }
+
+/* ===== 8. FOOTER ===== */
+.area-footer { background: var(--abu); text-align: center; font-size: 14px; }
+
+/* ===== 9. DAFTAR ANOTASI ===== */
+.anotasi { margin-top: 32px; }
+.anotasi h2 { font-size: 22px; margin-bottom: 16px; }
+.anotasi ol { list-style: none; counter-reset: nomor; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
+.anotasi li { counter-increment: nomor; position: relative; padding-left: 44px; font-size: 15px; }
+.anotasi li::before {
+  content: counter(nomor); position: absolute; left: 0; top: 0;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--anotasi); color: #fff; font-size: 14px; font-weight: bold;
+  display: flex; align-items: center; justify-content: center;
+}
+.anotasi strong { display: block; }
+
+/* ===== 10. MOBILE (layar di bawah 768 px) ===== */
+@media (max-width: 767px) {
+  .halaman { padding: 16px 12px 40px; }
+  .kerangka { padding: 20px 16px; gap: 20px; }
+  .isi-utama { gap: 20px; }
+  .area { padding: 12px; }
+  .layanan-grid { grid-template-columns: 1fr; }   /* tiga kartu jadi satu kolom */
+  .anotasi ol { grid-template-columns: 1fr; }
+  .area-header { flex-wrap: nowrap; gap: 8px; }   /* logo dan tombol tetap satu baris */
+  .merek { gap: 8px; min-width: 0; }
+  .merek h1 { font-size: 16px; }
+  .logo { width: 40px; height: 40px; flex-shrink: 0; }
+  .area-header .tombol { padding: 8px 10px; font-size: 13px; flex-shrink: 0; }
+  .area.area-menu { padding: 2px 8px; }            /* menu lebih ramping agar empat tautan muat */
+  .area-menu ul { gap: 0; }
+  .area-menu a { padding: 8px; }
+  .tentang { gap: 12px; }
+  .area h2, .anotasi h2 { font-size: 18px; }
+  .tombol { padding: 9px 14px; }
+}

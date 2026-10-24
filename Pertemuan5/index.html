@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe Company Profile - PT Mdaya BMW</title>
+
+  <!-- Semua pengaturan tampilan ada di css/style.css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="halaman">
+
+   
+    <div class="kerangka">
+
+      <!-- ===== 1. HEADER ===== -->
+      <header class="area area-header">
+        <span class="no" aria-hidden="true">1</span>
+        <div class="merek">
+          <div class="logo">
+            <img src="Img/logo.jpg" alt="Logo PT Mdaya BMW" width="50" height="50">
+          </div>
+          <h1>PT Mdaya BMW</h1>
+        </div>
+        <a class="tombol tombol-isi" href="#kontak">Hubungi Kami</a>
+      </header>
+
+      <!-- ===== 2. MENU NAVIGASI ===== -->
+      <nav class="area area-menu" aria-label="Menu utama">
+        <span class="no" aria-hidden="true">2</span>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <main class="isi-utama">
+
+        <!-- ===== 3. BANNER ===== -->
+    <section class="area" id="beranda" aria-label="Banner">
+      <span class="no" aria-hidden="true">3</span>
+      <div class="silang tinggi-banner">
+       <img src="Img/bener.png" alt="Banner PT Mdaya BMW">
+    </div>
+   </section>
+
+        <!-- ===== 4. PENGANTAR + DUA TOMBOL ===== -->
+        <section class="area area-pengantar" aria-labelledby="judul-pengantar">
+          <span class="no" aria-hidden="true">4</span>
+          <div class="pengantar-teks">
+            <h2 id="judul-pengantar">Temukan BMW Impian Anda</h2>
+            <p>Konsultasi, test drive, hingga serah terima. Kami dampingi di setiap langkah</p>
+          </div>
+          <div class="pengantar-tombol">
+            <a class="tombol tombol-isi" href="#layanan">Layanan Kami</a>
+            <a class="tombol tombol-garis" href="#tentang">Tentang Kami</a>
+          </div>
+        </section>
+
+        <!-- ===== 5. TENTANG KAMI ===== -->
+        <section class="area" id="tentang" aria-labelledby="judul-tentang">
+          <span class="no" aria-hidden="true">5</span>
+          <div class="tentang">
+            <div class="silang tinggi-foto ada-foto" role="img" aria-label="Showroom PT Mdaya BMW">
+            <img src="Img/tentang.jpg" alt="Showroom PT Mdaya BMW">
+            </div>
+            <div>
+              <h2 id="judul-tentang">Tentang Kami</h2>
+              <p>Sebagai dealer resmi BMW, kami berkomitmen untuk menghadirkan pengalaman kepemilikan kendaraan premium yang tak tertandingi. Kami menawarkan koleksi unit terbaru, layanan purna jual dengan teknisi bersertifikasi, dan fasilitas showroom modern untuk kenyamanan Anda. Kepuasan dan kepercayaan pelanggan adalah prioritas utama kami.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6. LAYANAN KAMI ===== -->
+        <section class="area" id="layanan" aria-labelledby="judul-layanan">
+          <span class="no" aria-hidden="true">6</span>
+          <h2 id="judul-layanan">Layanan Kami</h2>
+          <div class="layanan-grid">
+            <article class="kartu">
+              <h3>Pilihan Unit</h3>
+              <p>BMW M2</p>
+              <p>BMW M3</p>
+              <p>BMW M4</p>
+              <p>BMW M5</p>
+            </article>
+            <article class="kartu">
+              <h3>Konsultasi Pembelian</h3>
+              <p>Bingung memilih unit yang tepat? Tim kami siap memberikan konsultasi gratis mengenai spesifikasi, fitur, dan simulasi kredit sesuai kebutuhan Anda</p>
+            </article>
+            <article class="kartu">
+              <h3>Test Drive</h3>
+              <p>Rasakan langsung sensasi berkendara dengan BMW pilihan Anda. Jadwalkan sesi test drive bersama kami sekarang</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== 7. KONTAK KAMI ===== -->
+        <section class="area" id="kontak" aria-labelledby="judul-kontak">
+          <span class="no" aria-hidden="true">7</span>
+          <h2 id="judul-kontak">Kontak Kami</h2>
+          <div class="kontak-isi">
+            <div class="silang tinggi-peta ada-foto">
+             <img src="Img/lokasi.jpg" alt="Peta lokasi showroom PT Mdaya BMW">
+              </div>
+            </div>
+            <ul class="kontak-daftar">
+              <li>Alamat: Depok</li>
+              <li>Jam buka: 10:00 - 22:00</li>
+              <li>Email: info@mdaya-bmw.com</li>
+            </ul>
+            <a class="tombol tombol-isi" href="https://wa.me/" target="_blank" rel="noopener">Chat WhatsApp</a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ===== 8. FOOTER ===== -->
+      <footer class="area area-footer">
+        <span class="no" aria-hidden="true">8</span>
+        <p>&copy; 2026 PT Mdaya BMW. Semua hak dilindungi.</p>
+      </footer>
+
+    </div>
+
+    <!-- ===== DAFTAR ANOTASI FUNGSI AREA ===== -->
+    <section class="anotasi" aria-labelledby="judul-anotasi">
+      <h2 id="judul-anotasi">Anotasi Fungsi Area</h2>
+      <ol>
+        <li><strong>Header</strong> Menampilkan logo dan nama perusahaan sebagai identitas, serta tombol Hubungi Kami yang membawa pengunjung ke bagian Kontak.</li>
+        <li><strong>Menu navigasi</strong> Berpindah ke bagian Beranda, Tentang, Layanan, dan Kontak dalam satu halaman.</li>
+        <li><strong>Banner</strong> Foto utama showroom sebagai kesan pertama pengunjung, tanpa teks.</li>
+        <li><strong>Pengantar</strong> Judul dan kalimat singkat tentang tawaran perusahaan, dengan dua tombol menuju Layanan dan Tentang.</li>
+        <li><strong>Tentang Kami</strong> Foto showroom dan profil singkat untuk membangun kepercayaan pengunjung.</li>
+        <li><strong>Layanan Kami</strong> Tiga kartu layanan: Pilihan Unit, Konsultasi Pembelian, dan Test Drive. Kartu dapat ditambah tanpa mengubah susunan.</li>
+        <li><strong>Kontak Kami</strong> Peta lokasi, alamat, jam buka, dan tombol WhatsApp agar pengunjung dapat menghubungi dan datang ke showroom.</li>
+        <li><strong>Footer</strong> Pernyataan hak cipta perusahaan di bagian paling bawah halaman.</li>
+      </ol>
+    </section>
+
+  </div>
+</body>
+</html>
