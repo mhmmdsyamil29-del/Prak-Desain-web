@@ -7,7 +7,7 @@
 | Nama          | Muhammad Syamil                                    |
 | NIM           | _(4525210130)_                                        |
 | Program Studi | _(Teknik Informatika)_                              |
-| Mata Kuliah   | Desain Web                                         |
+| Mata Kuliah   | Prak Desain Web                                         |
 | Kelas         | _(A - Lab AI )_                                      |
 | Pertemuan     | 6 - Mockup, Visual Hierarchy, Warna, dan Tipografi |
 
