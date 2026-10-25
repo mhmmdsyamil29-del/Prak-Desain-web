@@ -56,5 +56,4 @@ Proyek ini merupakan tugas praktikum HTML yang berisi halaman profil organisasi 
 
 
 ##  Lisensi
-
 &copy; 2026 BEM Universitas Pancasila. Dibuat untuk Tugas Praktikum HTML.
