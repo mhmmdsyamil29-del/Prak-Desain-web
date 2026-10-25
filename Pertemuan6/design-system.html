@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System - Portal Akademik</title>
+    <link rel="stylesheet" href="css/design-system.css" />
+    <style>
+      /* Gaya khusus halaman dokumentasi (bukan bagian design system) */
+      .doc { max-width: 1080px; margin: 0 auto; padding: var(--space-6) var(--space-4) var(--space-7); }
+      .doc > header { margin-bottom: var(--space-6); }
+      .doc h1 { font-size: var(--fs-h1); margin-bottom: var(--space-2); }
+      .section { margin-bottom: var(--space-6); }
+      .section > h2 { font-size: var(--fs-h2); padding-bottom: var(--space-2); margin-bottom: var(--space-4); border-bottom: 2px solid var(--color-neutral-200); }
+      .grid { display: grid; gap: var(--space-4); }
+      .grid-5 { grid-template-columns: repeat(5, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .swatch { border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; background: var(--bg-surface); }
+      .swatch .chip { height: 64px; }
+      .swatch .meta { padding: var(--space-2) var(--space-3); font-size: var(--fs-caption); line-height: 1.4; }
+      .swatch .meta b { display: block; font-size: var(--fs-small); }
+      .group-title { font-size: var(--fs-small); font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin: var(--space-4) 0 var(--space-2); }
+      .type-row { display: grid; grid-template-columns: 1fr 220px; align-items: baseline; gap: var(--space-4); padding: var(--space-3) 0; border-bottom: 1px solid var(--border-color); }
+      .type-row code, .spacing-row code { font-size: var(--fs-caption); color: var(--text-muted); }
+      .spacing-row { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: var(--space-4); padding: var(--space-1) 0; }
+      .bar { height: 16px; background: var(--color-primary-500); border-radius: 3px; }
+      .row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+      .radius-box { height: 64px; display: grid; place-items: center; background: var(--color-primary-50); border: 1px solid var(--color-primary-100); font-size: var(--fs-caption); }
+      @media (max-width: 700px) { .grid-5, .grid-3, .grid-2 { grid-template-columns: 1fr 1fr; } .type-row { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="doc">
+      <header>
+        <p class="eyebrow"><a href="index.html" style="color:inherit;text-decoration:none">&larr; Kembali ke Dashboard</a> &nbsp;&middot;&nbsp; Design System</p>
+        <h1>Portal Akademik &mdash; Simple Design System</h1>
+        <p class="text-small">Colors, typography, spacing, buttons, form controls, dan cards. Sumber: <code>css/design-system.css</code></p>
+      </header>
+
+      <!-- COLORS -->
+      <section class="section">
+        <h2>1. Colors</h2>
+        <p class="group-title">Primary</p>
+        <div class="grid grid-5">
+          <div class="swatch"><div class="chip" style="background:var(--color-primary-50)"></div><div class="meta"><b>Primary 50</b>#EEF2FF</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-primary-100)"></div><div class="meta"><b>Primary 100</b>#DDE5FF</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-primary-500)"></div><div class="meta"><b>Primary 500</b>#3454D1</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-primary-600)"></div><div class="meta"><b>Primary 600</b>#2A45B3</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-primary-700)"></div><div class="meta"><b>Primary 700</b>#243DA8</div></div>
+        </div>
+        <p class="group-title">Secondary / Accent</p>
+        <div class="grid grid-5">
+          <div class="swatch"><div class="chip" style="background:var(--color-accent-50)"></div><div class="meta"><b>Accent 50</b>#FFF4E5</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-accent-500)"></div><div class="meta"><b>Accent 500</b>#F58A1F</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-accent-700)"></div><div class="meta"><b>Accent 700</b>#B35A00</div></div>
+        </div>
+        <p class="group-title">Neutral</p>
+        <div class="grid grid-5">
+          <div class="swatch"><div class="chip" style="background:var(--color-neutral-900)"></div><div class="meta"><b>Neutral 900</b>#172033</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-neutral-800)"></div><div class="meta"><b>Neutral 800</b>#202634</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-neutral-600)"></div><div class="meta"><b>Neutral 600</b>#5B6577</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-neutral-400)"></div><div class="meta"><b>Neutral 400</b>#9AA3B2</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-neutral-200)"></div><div class="meta"><b>Neutral 200</b>#E4E8EF</div></div>
+        </div>
+        <p class="group-title">Status</p>
+        <div class="grid grid-5">
+          <div class="swatch"><div class="chip" style="background:var(--color-success-600)"></div><div class="meta"><b>Success</b>#1E7A30</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-warning-600)"></div><div class="meta"><b>Warning</b>#9A5F0A</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-danger-600)"></div><div class="meta"><b>Danger</b>#C62828</div></div>
+          <div class="swatch"><div class="chip" style="background:var(--color-info-600)"></div><div class="meta"><b>Info</b>#1F5A9A</div></div>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="section">
+        <h2>2. Typography</h2>
+        <p class="text-small">Font: Inter (fallback Segoe UI / system-ui). Type scale 30 / 21 / 16 / 15 / 13 / 12 px dengan line-height body 1.6.</p>
+        <div class="type-row"><span class="text-h1">Heading 1 &mdash; Judul halaman</span><code>30px &middot; Bold 700</code></div>
+        <div class="type-row"><span class="text-h2">Heading 2 &mdash; Judul kartu</span><code>21px &middot; Semibold 600</code></div>
+        <div class="type-row"><span class="text-h3">Heading 3 &mdash; Judul item</span><code>16px &middot; Semibold 600</code></div>
+        <div class="type-row"><span class="text-body">Body &mdash; Teks isi paragraf dan data tabel.</span><code>15px &middot; Regular 400</code></div>
+        <div class="type-row"><span class="text-small">Small &mdash; Deskripsi dan teks pendukung.</span><code>13px &middot; Regular 400</code></div>
+        <div class="type-row"><span class="eyebrow" style="margin:0">Eyebrow / Label</span><code>12px &middot; Bold 700 &middot; caps</code></div>
+      </section>
+
+      <!-- SPACING -->
+      <section class="section">
+        <h2>3. Spacing &amp; Shape</h2>
+        <div class="spacing-row"><code>--space-1 &middot; 4px</code><div class="bar" style="width:4px"></div></div>
+        <div class="spacing-row"><code>--space-2 &middot; 8px</code><div class="bar" style="width:8px"></div></div>
+        <div class="spacing-row"><code>--space-3 &middot; 12px</code><div class="bar" style="width:12px"></div></div>
+        <div class="spacing-row"><code>--space-4 &middot; 16px</code><div class="bar" style="width:16px"></div></div>
+        <div class="spacing-row"><code>--space-5 &middot; 24px</code><div class="bar" style="width:24px"></div></div>
+        <div class="spacing-row"><code>--space-6 &middot; 32px</code><div class="bar" style="width:32px"></div></div>
+        <div class="spacing-row"><code>--space-7 &middot; 48px</code><div class="bar" style="width:48px"></div></div>
+        <p class="group-title">Radius</p>
+        <div class="grid grid-3">
+          <div class="radius-box" style="border-radius:var(--radius-sm)">sm &middot; 6px</div>
+          <div class="radius-box" style="border-radius:var(--radius-md)">md &middot; 12px</div>
+          <div class="radius-box" style="border-radius:var(--radius-lg)">lg &middot; 18px</div>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="section">
+        <h2>4. Buttons</h2>
+        <p class="group-title">Varian</p>
+        <div class="row">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-ghost">Ghost</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-primary" disabled>Disabled</button>
+        </div>
+        <p class="group-title">Ukuran</p>
+        <div class="row">
+          <button class="btn btn-primary btn-sm">Small 32px</button>
+          <button class="btn btn-primary">Default 40px</button>
+          <button class="btn btn-primary btn-lg">Large 48px</button>
+        </div>
+      </section>
+
+      <!-- FORMS -->
+      <section class="section">
+        <h2>5. Form Controls</h2>
+        <div class="grid grid-2">
+          <div>
+            <div class="field"><label class="label" for="f1">Nama lengkap</label><input class="input" id="f1" placeholder="Masukkan nama" /><span class="help-text">Sesuai KTP.</span></div>
+            <div class="field"><label class="label" for="f2">Email kampus</label><input class="input is-error" id="f2" value="kava@" /><span class="error-text">Format email tidak valid.</span></div>
+            <div class="field"><label class="label" for="f3">NIM (nonaktif)</label><input class="input" id="f3" value="2025130" disabled /></div>
+          </div>
+          <div>
+            <div class="field"><label class="label" for="f4">Program studi</label>
+              <select class="select" id="f4"><option>Teknik Informatika</option><option>Sistem Informasi</option></select></div>
+            <div class="field"><label class="label" for="f5">Catatan</label><textarea class="textarea" id="f5" placeholder="Tulis catatan..."></textarea></div>
+            <div class="row"><label class="check"><input type="checkbox" checked /> Setuju syarat</label><label class="check"><input type="radio" name="r" checked /> Reguler</label><label class="check"><input type="radio" name="r" /> Karyawan</label></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="section">
+        <h2>6. Cards &amp; Badges</h2>
+        <div class="grid grid-3">
+          <div class="card"><p class="eyebrow">Default</p><h3 class="text-h3">Card standar</h3><p class="text-small">Border 1px, radius 12px, shadow lembut, padding 24px.</p></div>
+          <div class="card card-interactive"><p class="eyebrow">Interactive</p><h3 class="text-h3">Card dapat diklik</h3><p class="text-small">Naik 2px dan shadow menebal saat di-hover.</p></div>
+          <div class="card card-flat"><p class="eyebrow">Flat</p><h3 class="text-h3">Card datar</h3><p class="text-small">Tanpa shadow, untuk area sekunder.</p></div>
+        </div>
+        <p class="group-title">Badge</p>
+        <div class="row">
+          <span class="badge badge-success">Success</span><span class="badge badge-warning">Warning</span><span class="badge badge-danger">Danger</span><span class="badge badge-info">Info</span><span class="badge badge-accent">Accent</span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
